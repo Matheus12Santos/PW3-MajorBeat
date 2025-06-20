@@ -1,0 +1,17 @@
+#header {    
+    background-color: #F2F1E8;    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+#header ul {
+    display: flex;
+    justify-content: center;    
+    padding: 0;
+}
+
+#header ul li {    
+    list-style: none;
+    padding-left: 20px;
+}

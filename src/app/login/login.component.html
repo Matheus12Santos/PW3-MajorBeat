@@ -1,4 +1,8 @@
-<label>Email: <input type="email" name="email_name"><br><br></label>
-<label>Senha: <input type="password"><br></label>
-<a href=""><br>Esqueci minha senha?<br><br></a>
-<button>Entrar</button>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <input formControlName="email" type="email" placeholder="E-mail"/>    
+    <input formControlName="password" type="password" placeholder="Senha"/>
+
+    <a href=""><br>Esqueci minha senha?<br><br></a>
+
+    <button type="submit" [disabled]="loginForm.invalid">Entrar</button>    
+</form>

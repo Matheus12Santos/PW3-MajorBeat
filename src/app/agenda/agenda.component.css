@@ -1,0 +1,12 @@
+.demo-inline-calendar-card {
+    width: 300px;
+}
+
+#event_block {
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;    
+}

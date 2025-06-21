@@ -1,1 +1,29 @@
-<p>agenda works!</p>
+<h1>Agenda</h1>
+
+<mat-card class="demo-inline-calendar-card">
+  <mat-calendar [selected]="selected()" (selectedChange)="selected.set($event)"></mat-calendar>
+</mat-card>
+
+<hr>
+
+<!-- Botão para adicionar lembrete -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add_circle" />
+<button (click)="addReminder()">
+  <span class="material-symbols-outlined">add_circle</span>
+</button>
+
+
+<!-- Bloco onde os lembretes aparecerão -->
+<section id="event_block">
+  <div *ngIf="selected()">
+    <h3>Lembretes para: {{ selected() | date: 'fullDate' }}</h3>
+    <ul>
+      <li *ngFor="let reminder of remindersBySelectedDate(); let i = index">
+        {{ reminder }}
+        <button (click)="editReminder(i)">Editar</button>
+        <button (click)="deleteReminder(i)">Excluir</button>
+      </li>
+    </ul>
+  </div>
+  <p *ngIf="!selected()">Selecione um dia para ver ou adicionar lembretes.</p>
+</section>

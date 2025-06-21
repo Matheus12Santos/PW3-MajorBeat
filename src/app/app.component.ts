@@ -4,10 +4,11 @@ import { HomeComponent } from "./home/home.component";
 import { SobreComponent } from "./sobre/sobre.component";
 import { ContatoComponent } from "./contato/contato.component";
 import { HeaderComponent } from "./header/header.component";
+import { AgendaComponent } from "./agenda/agenda.component";
 
 @Component({
   selector: 'app-root',
-  imports: [LoginComponent, HomeComponent, SobreComponent, ContatoComponent, HeaderComponent],
+  imports: [LoginComponent, HomeComponent, SobreComponent, ContatoComponent, HeaderComponent, AgendaComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

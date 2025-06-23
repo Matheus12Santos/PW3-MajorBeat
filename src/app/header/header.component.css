@@ -11,7 +11,8 @@
     padding: 0;
 }
 
-#header ul li {    
+#header ul a {    
     list-style: none;
+    text-decoration: none;
     padding-left: 20px;
 }
